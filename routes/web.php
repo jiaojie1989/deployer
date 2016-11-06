@@ -8,7 +8,7 @@ $router->group(['namespace' => 'Auth'], function () use ($router) {
     $router->post('login', 'LoginController@login');
     $router->get('login/2fa', 'LoginController@showTwoFactorAuthenticationForm')->name('auth.twofactor');
     $router->post('login/2fa', 'LoginController@twoFactorAuthenticate');
-    $router->post('logout', 'LoginController@logout');
+    $router->post('logout', 'LoginController@logout')->name('auth.logout');
 
     // Password reset routes
     $router->get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('auth.reset-password');
