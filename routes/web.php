@@ -23,4 +23,5 @@ $router->group(['middleware' => ['auth', 'jwt'], 'prefix' => 'app'], function ()
 });
 
 // Web application route
-$router->get('{any?}', 'WebappController@index')->middleware(['auth', 'jwt'])->where('any', '.*');
+$router->get('timeline', 'DashboardController@timeline')->middleware(['auth', 'jwt'])->name('dashboard.timeline');
+$router->get('/', 'DashboardController@index')->middleware(['auth', 'jwt'])->name('dashboard');
