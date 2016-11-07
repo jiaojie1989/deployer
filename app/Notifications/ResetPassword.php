@@ -53,7 +53,10 @@ class ResetPassword extends Notification implements ShouldQueue
     public function toMail(User $user)
     {
         return (new MailMessage)
-            ->view('notifications.email', [ 'user' => $user ])
+            ->view([
+                'notifications.email',
+                'notifications.email-plain'
+            ], [ 'user' => $user ])
             ->subject(Lang::get('emails.reset_subject'))
             ->line([
                 Lang::get('emails.reset_header'),
