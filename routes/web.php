@@ -34,4 +34,3 @@ $router->post('profile/gravatar', 'ProfileController@gravatar')->name('profile.g
 $router->post('profile/twofactor', 'ProfileController@twoFactor')->name('profile.twofactor');
 $router->get('profile/email/{token}', 'ProfileController@email')->name('profile.confirm-change-email');
 $router->post('profile/update-email', 'ProfileController@changeEmail')->name('profile.change-email');
-
