@@ -21,7 +21,7 @@ $router->group(['namespace' => 'Resources', 'prefix' => 'projects/{project}'], f
     $router->resource('check-url', 'CheckUrlController', $actions);
 
     $router->post('commands/reorder', 'CommandController@reorder')->name('commands.reorder');
-    $router->get('projects/{id}/commands/{step}', 'CommandController@listing')->name('commands.step');
+    $router->get('commands/{step}', 'CommandController@listing')->name('commands.step');
 });
 
 $router->get('projects/{project}', 'DeploymentController@project');

@@ -4,7 +4,7 @@
 
 // Include the API routes inside an app path and add the authentication middleware to protect them
 //$router->group(['middleware' => ['auth', 'jwt'], 'prefix' => 'app'], function () use ($router) {
-//    require base_path('routes/api.php');
+    require base_path('routes/api.php');
 //});
 
 // Dashboard routes
